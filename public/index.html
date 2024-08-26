@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/qst.css" />
+
+    <link
+      rel="stylesheet"
+      href="./assets/font/themify-icons/themify-icons.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/img/avt-class (1).png"
+    />
+    <title>Gửi Câu Tâm Tình</title>
+  </head>
+  <style>
+    @media (max-width: 740px) {
+      body {
+        height: 1000px;
+        display: block;
+      }
+
+      .modal-container-1 {
+        width: auto;
+        top: 20px;
+        min-height: 180px;
+        margin: 100px 45px 30px 45px;
+      }
+
+      .modal-container-2 {
+        width: auto;
+        margin: 20px 45px;
+      }
+
+      .topic-1,
+      .modal-container-2 .topic-2 {
+        height: 15px;
+        padding: 15px;
+        font-size: 10px;
+      }
+
+      .modal-container-1 .sud-tittle {
+        padding: 25px;
+        font-size: 16px;
+      }
+
+      .topic-1 .img-topic-1 {
+        display: none;
+      }
+
+      .sud-topic-1 {
+        position: relative;
+      }
+
+      .img-topic-sud-1 {
+        position: absolute;
+        display: block;
+        width: 44px;
+        border-radius: 50%;
+        right: 10px;
+        bottom: -15px;
+      }
+
+      input#class,
+      input#name {
+        padding: 6px;
+        width: 90px;
+      }
+
+      #contactForm .input-qst {
+        font-size: 20px;
+      }
+
+      #contactForm .contact-info {
+        font-size: 15px;
+      }
+
+      textarea#question {
+        height: 20px;
+        width: 185px;
+        margin-top: 5px;
+      }
+    }
+  </style>
+  <body>
+    <div class="modal-container-1">
+      <div class="topic-1">
+        <h1>Chúng tôi là A4K15</h1>
+        <img
+          class="img-topic-1"
+          src="./assets/img/avt-class.png"
+          alt="AVT-A4K15"
+        />
+      </div>
+      <div class="sud-topic-1">
+        <p class="sud-tittle">
+          Bạn có điều gì muốn chia sẽ, góp ý, hay ước mơ của bạn đối với 10A4.
+          Hãy mạnh dạng chia sẽ với chúng tôi nào.
+        </p>
+
+        <img
+          class="img-topic-sud-1"
+          src="./assets/img/avt-class.png"
+          alt="AVT-A4K15"
+        />
+      </div>
+    </div>
+
+    <div class="modal-container-2">
+      <div class="topic-2">
+        <h1>Gửi Điều Bạn Muốn Nói</h1>
+      </div>
+      <form id="contactForm">
+        <div class="contact-info">
+          <div class="input-name">
+            <label for="name">Tên của bạn:</label>
+            <input type="text" id="name" name="name" required /><br /><br />
+          </div>
+          <div class="input-class">
+            <label for="class">Lớp của bạn:</label>
+            <input
+              type="text"
+              id="class"
+              name="class"
+              placeholder="(Ko bắt buộc)"
+            /><br /><br />
+          </div>
+          <div class="input-qst">
+            <label for="question">Câu Nói Của Bạn:</label><br />
+            <textarea
+              id="question"
+              name="question"
+              rows="4"
+              cols="50"
+              placeholder="Nhập câu Trl ở đây nì"
+              required
+            ></textarea
+            ><br /><br />
+            <button class="submit-button" type="submit">Gửi</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="./sum.js"></script>
+  </body>
+</html>

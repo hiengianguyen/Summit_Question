@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/* .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(217, 245, 249);
+} */
+
+body {
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(217, 245, 249);
+}
+
+.modal-container-1 {
+  background-color: #fff;
+  width: 900px;
+  min-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin: 40px 45px 30px 45px;
+  top: 40px;
+}
+
+.topic-1 {
+  position: relative;
+  display: flex;
+  height: 74px;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(59 130 246 / 0.5);
+  color: #7c1800;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.img-topic-1 {
+  position: absolute;
+  width: 60px;
+  right: 80px;
+  border-radius: 50%;
+}
+
+.img-topic-sud-1 {
+  display: none;
+  width: 10px;
+}
+
+.modal-container-1 .sud-tittle {
+  padding: 25px;
+  font-size: 28px;
+}
+
+.modal-container-2 {
+  background-color: #fff;
+  width: 900px;
+  min-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin: 20px 45px;
+  bottom: 45px;
+}
+
+.topic-2 {
+  display: flex;
+  height: 74px;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(59 130 246 / 0.5);
+  color: #7c1800;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* .modal-container .modal-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 15px;
+  border-top-right-radius: 10px;
+  color: #fff;
+} */
+
+.modal-container-2 .modal-close:hover {
+  color: #fff;
+  background-color: red;
+}
+
+form#contactForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#contactForm .contact-info {
+  font-size: 25px;
+  text-align: center;
+}
+
+#contactForm .input-qst {
+  font-size: 35px;
+}
+
+.contact-info .input-name {
+  display: inline-block;
+}
+
+input#name {
+  padding: 10px;
+}
+
+input#name:focus {
+  border-color: #2be6ef;
+}
+
+input#class {
+  padding: 10px;
+}
+
+textarea#question {
+  height: 120px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.button-summit-qst {
+  text-align: center;
+}
+
+.submit-button {
+  color: #fff;
+  background-color: #166cb4;
+  border: 0;
+  padding: 11px 22px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.submit-button:hover {
+  color: #000;
+  background-color: #4e82ae;
+  border: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+}
