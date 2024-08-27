@@ -10,13 +10,16 @@ document
 
     try {
       // Gửi dữ liệu đến API
-      const response = await fetch("http://localhost:3000/summit-question", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(jsonData),
-      });
+      const response = await fetch(
+        "https://66ccad7da4dd3c8a71b87616.mockapi.io/textContents",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(jsonData),
+        }
+      );
 
       if (response.ok) {
         const result = await response.json();

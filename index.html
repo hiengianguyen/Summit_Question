@@ -17,26 +17,46 @@
     <title>Gửi Câu Tâm Tình</title>
   </head>
   <style>
+    body {
+      height: 1000px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      background-image: url("./assets/img/background-1.png");
+      background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
+      background-position: center; /* Căn giữa hình nền */
+    }
+
     @media (max-width: 740px) {
-      .tittle {
+      body {
+        height: 1000px;
+        display: block;
+        background-image: url("./assets/img/background-2.png");
+        background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
+        background-position: center; /* Căn giữa hình nền */
+      }
+
+      .modal-container-1 {
         width: auto;
         top: 20px;
         min-height: 180px;
+        margin: 50px 45px 30px 45px;
       }
 
-      .modal-container {
+      .modal-container-2 {
         width: auto;
         margin: 20px 45px;
       }
 
       .topic-1,
-      .modal-container .topic-2 {
+      .modal-container-2 .topic-2 {
         height: 15px;
         padding: 15px;
-        font-size: 11px;
+        font-size: 9px;
       }
 
-      .tittle .sud-tittle {
+      .modal-container-1 .sud-tittle {
         padding: 25px;
         font-size: 16px;
       }
@@ -54,11 +74,37 @@
         display: block;
         width: 44px;
         border-radius: 50%;
-        right: 2px;
-        bottom: 7px;
+        right: 10px;
+        bottom: -15px;
       }
 
-      input#class,
+      input#name {
+        border-radius: 5em;
+      }
+
+      input#name:focus {
+        border-color: #007bff; /* Màu viền khi được focus */
+        background-color: #e9ecef; /* Màu nền khi được focus */
+        color: #000; /* Màu chữ khi được focus */
+        outline: none; /* Loại bỏ viền mặc định của trình duyệt khi được focus */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1.4); /* Hiệu ứng đổ bóng khi được focus */
+      }
+
+      .select-class:focus {
+        border-color: #007bff; /* Màu viền khi được focus */
+        background-color: #e9ecef; /* Màu nền khi được focus */
+        color: #000; /* Màu chữ khi được focus */
+        outline: none; /* Loại bỏ viền mặc định của trình duyệt khi được focus */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1.4); /* Hiệu ứng đổ bóng khi được focus */
+      }
+
+      .select-class {
+        border: 2px solid #2be6ef;
+        border-radius: 5em;
+        height: 30px;
+        width: 70px;
+      }
+
       input#name {
         padding: 6px;
         width: 90px;
@@ -73,74 +119,119 @@
       }
 
       textarea#question {
-        height: 50px;
-        width: 200px;
+        height: 20px;
+        width: 185px;
+        border-radius: 5em;
         margin-top: 5px;
+      }
+
+      .header-alert {
+        font-size: 13px;
+      }
+
+      .alert-container {
+        margin: 45px;
+      }
+
+      .content-alert {
+        font-size: 13px;
+        letter-spacing: 2px;
       }
     }
   </style>
   <body>
-    <div class="modal">
-      <div class="tittle">
-        <div class="topic-1">
-          <h1>Chúng tôi là A4K15</h1>
-          <img
-            class="img-topic-1"
-            src="./assets/img/avt-class.png"
-            alt="AVT-A4K15"
-          />
-        </div>
-        <div class="sud-topic-1">
-          <p class="sud-tittle">
-            Bạn có điều gì muốn chia sẽ, góp ý, hay ước mơ của bạn đối với 10A4.
-            Hãy mạnh dạng chia sẽ với chúng tôi nào.
-          </p>
-
-          <img
-            class="img-topic-sud-1"
-            src="./assets/img/avt-class.png"
-            alt="AVT-A4K15"
-          />
-        </div>
+    <div class="modal-container-1">
+      <div class="topic-1">
+        <h1>Chúng tôi là A4K15</h1>
+        <img
+          class="img-topic-1"
+          src="./assets/img/avt-class.png"
+          alt="AVT-A4K15"
+        />
       </div>
-      <br />
-      <div class="modal-container">
-        <div class="topic-2">
-          <h1>Gửi Điều Bạn Muốn Nói</h1>
-        </div>
-        <form id="contactForm">
-          <div class="contact-info">
-            <div class="input-name">
-              <label for="name">Tên của bạn:</label>
-              <input type="text" id="name" name="name" required /><br /><br />
-            </div>
-            <div class="input-class">
-              <label for="class">Lớp của bạn:</label>
-              <input
-                type="text"
-                id="class"
-                name="class"
-                placeholder="(Ko bắt buộc)"
-              /><br /><br />
-            </div>
-            <div class="input-qst">
-              <label for="question">Câu Nói Của Bạn:</label><br />
-              <textarea
-                id="question"
-                name="question"
-                rows="4"
-                cols="50"
-                placeholder="Nhập câu Trl ở đây nì"
-                required
-              ></textarea
-              ><br /><br />
-              <button class="submit-button" type="submit">Gửi</button>
-            </div>
-          </div>
-        </form>
+      <div class="sud-topic-1">
+        <p class="sud-tittle">
+          Bạn có điều gì muốn chia sẽ, góp ý, hay ước mơ của bạn đối với 10A4.
+          Hãy mạnh dạng chia sẽ với chúng tôi nào.
+        </p>
+
+        <img
+          class="img-topic-sud-1"
+          src="./assets/img/avt-class.png"
+          alt="AVT-A4K15"
+        />
       </div>
     </div>
 
-    <script src="./sum.js"></script>
+    <div class="modal-container-2">
+      <div class="topic-2">
+        <h1>Gửi Điều Bạn Muốn Nói</h1>
+      </div>
+      <form id="contactForm">
+        <div class="contact-info">
+          <div class="input-name">
+            <label for="name">Tên của bạn:</label>
+            <input type="text" id="name" name="name" required /><br /><br />
+          </div>
+          <div class="input-class">
+            <label for="class">Lớp của bạn:</label>
+            <select class="select-class" id="class" name="class">
+              <option value="" selected></option>
+            </select>
+
+            <br /><br />
+          </div>
+          <div class="input-qst">
+            <label for="question">Câu Nói Của Bạn:</label><br />
+            <textarea
+              class="text-content"
+              id="question"
+              name="textcontent"
+              rows="4"
+              cols="50"
+              placeholder="Nhập câu nói ở đây nè"
+              required
+            ></textarea
+            ><br /><br />
+            <button class="submit-button" type="submit">Gửi</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="alert js-alert">
+      <div class="alert-container">
+        <div class="alert-close">
+          <i class="ti-close"></i>
+        </div>
+        <div class="header-alert">
+          <h1>Chúng tôi là A4K15</h1>
+        </div>
+        <div class="content-alert">
+          <h1>Thông Báo</h1>
+
+          <p>Gửi câu nói thành công rùi !!!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert-fail">
+      <div class="alert-container">
+        <div class="alert-close-2">
+          <i class="ti-close"></i>
+        </div>
+        <div class="header-alert">
+          <h1>Chúng tôi là A4K15</h1>
+        </div>
+        <div class="content-alert">
+          <h1>Thông Báo</h1>
+
+          <p>Lỗi Server !!!</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./database.js"></script>
+    <script src="./selection.js"></script>
   </body>
 </html>
