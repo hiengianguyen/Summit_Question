@@ -4,8 +4,24 @@
   box-sizing: 0;
 }
 
+.open-alert {
+  display: flex;
+}
+
 .clear {
   clear: both;
+}
+
+label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* .modal {
@@ -20,15 +36,6 @@
   background-color: rgb(217, 245, 249);
 } */
 
-body {
-  height: 1000px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  background-color: rgb(217, 245, 249);
-}
-
 .modal-container-1 {
   background-color: #fff;
   width: 900px;
@@ -37,6 +44,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   margin: 40px 45px 30px 45px;
   top: 40px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .topic-1 {
@@ -47,7 +55,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(59 130 246 / 0.5);
-  color: #7c1800;
+  color: #ffa28c;
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -67,7 +75,7 @@ body {
 
 .modal-container-1 .sud-tittle {
   padding: 25px;
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .modal-container-2 {
@@ -78,6 +86,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   margin: 20px 45px;
   bottom: 45px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .topic-2 {
@@ -87,7 +96,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(59 130 246 / 0.5);
-  color: #7c1800;
+  color: #ffa28c;
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -129,14 +138,30 @@ form#contactForm {
 
 input#name {
   padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #2be6ef;
 }
 
 input#name:focus {
-  border-color: #2be6ef;
+  border-color: #007bff; /* Màu viền khi được focus */
+  background-color: #e9ecef; /* Màu nền khi được focus */
+  color: #000; /* Màu chữ khi được focus */
+  outline: none; /* Loại bỏ viền mặc định của trình duyệt khi được focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.4); /* Hiệu ứng đổ bóng khi được focus */
 }
 
-input#class {
-  padding: 10px;
+.select-class {
+  border: 2px solid #2be6ef;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.select-class:focus {
+  border-color: #007bff; /* Màu viền khi được focus */
+  background-color: #e9ecef; /* Màu nền khi được focus */
+  color: #000; /* Màu chữ khi được focus */
+  outline: none; /* Loại bỏ viền mặc định của trình duyệt khi được focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.4); /* Hiệu ứng đổ bóng khi được focus */
 }
 
 textarea#question {
@@ -144,6 +169,16 @@ textarea#question {
   margin-top: 20px;
   padding: 10px;
   font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #2be6ef;
+}
+
+textarea#question:focus {
+  border-color: #007bff; /* Màu viền khi được focus */
+  background-color: #e9ecef; /* Màu nền khi được focus */
+  color: #000; /* Màu chữ khi được focus */
+  outline: none; /* Loại bỏ viền mặc định của trình duyệt khi được focus */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1.4); /* Hiệu ứng đổ bóng khi được focus */
 }
 
 .button-summit-qst {
@@ -165,4 +200,79 @@ textarea#question {
   border: 1px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.alert-fail,
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-container {
+  background-color: #fff;
+  width: 900px;
+  min-height: 200px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.header-alert {
+  background-color: rgb(59 130 246 / 0.5);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: #fff;
+  letter-spacing: 3px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.header-alert h1 {
+  color: #ffa28c;
+}
+
+.content-alert {
+  background-color: #fff;
+  font-weight: 600;
+  height: 100px;
+
+  font-size: 17px;
+  color: #000;
+  letter-spacing: 3px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.content-alert h1 {
+  margin: 17px 0;
+}
+
+.alert-close-2,
+.alert-container .alert-close {
+  background-color: rgb(59 130 246 / 0);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 16px;
+  color: #fff;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+}
+
+.alert-close-2:hover,
+.alert-container .alert-close:hover {
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  background: rgb(244, 67, 54);
+  color: #000;
 }

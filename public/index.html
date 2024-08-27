@@ -17,17 +17,31 @@
     <title>Gửi Câu Tâm Tình</title>
   </head>
   <style>
+    body {
+      height: 1000px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      background-image: url("./assets/img/background-1.png");
+      background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
+      background-position: center; /* Căn giữa hình nền */
+    }
+
     @media (max-width: 740px) {
       body {
         height: 1000px;
         display: block;
+        background-image: url("./assets/img/background-2.png");
+        background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
+        background-position: center; /* Căn giữa hình nền */
       }
 
       .modal-container-1 {
         width: auto;
         top: 20px;
         min-height: 180px;
-        margin: 100px 45px 30px 45px;
+        margin: 50px 45px 30px 45px;
       }
 
       .modal-container-2 {
@@ -39,7 +53,7 @@
       .modal-container-2 .topic-2 {
         height: 15px;
         padding: 15px;
-        font-size: 10px;
+        font-size: 9px;
       }
 
       .modal-container-1 .sud-tittle {
@@ -64,7 +78,33 @@
         bottom: -15px;
       }
 
-      input#class,
+      input#name {
+        border-radius: 5em;
+      }
+
+      input#name:focus {
+        border-color: #007bff; /* Màu viền khi được focus */
+        background-color: #e9ecef; /* Màu nền khi được focus */
+        color: #000; /* Màu chữ khi được focus */
+        outline: none; /* Loại bỏ viền mặc định của trình duyệt khi được focus */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1.4); /* Hiệu ứng đổ bóng khi được focus */
+      }
+
+      .select-class:focus {
+        border-color: #007bff; /* Màu viền khi được focus */
+        background-color: #e9ecef; /* Màu nền khi được focus */
+        color: #000; /* Màu chữ khi được focus */
+        outline: none; /* Loại bỏ viền mặc định của trình duyệt khi được focus */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 1.4); /* Hiệu ứng đổ bóng khi được focus */
+      }
+
+      .select-class {
+        border: 2px solid #2be6ef;
+        border-radius: 5em;
+        height: 30px;
+        width: 70px;
+      }
+
       input#name {
         padding: 6px;
         width: 90px;
@@ -81,7 +121,21 @@
       textarea#question {
         height: 20px;
         width: 185px;
+        border-radius: 5em;
         margin-top: 5px;
+      }
+
+      .header-alert {
+        font-size: 13px;
+      }
+
+      .alert-container {
+        margin: 45px;
+      }
+
+      .content-alert {
+        font-size: 13px;
+        letter-spacing: 2px;
       }
     }
   </style>
@@ -121,21 +175,21 @@
           </div>
           <div class="input-class">
             <label for="class">Lớp của bạn:</label>
-            <input
-              type="text"
-              id="class"
-              name="class"
-              placeholder="(Ko bắt buộc)"
-            /><br /><br />
+            <select class="select-class" id="class" name="class">
+              <option value="" selected></option>
+            </select>
+
+            <br /><br />
           </div>
           <div class="input-qst">
             <label for="question">Câu Nói Của Bạn:</label><br />
             <textarea
+              class="text-content"
               id="question"
-              name="question"
+              name="textcontent"
               rows="4"
               cols="50"
-              placeholder="Nhập câu Trl ở đây nì"
+              placeholder="Nhập câu nói ở đây nè"
               required
             ></textarea
             ><br /><br />
@@ -145,6 +199,39 @@
       </form>
     </div>
 
-    <script src="./sum.js"></script>
+    <div class="alert js-alert">
+      <div class="alert-container">
+        <div class="alert-close">
+          <i class="ti-close"></i>
+        </div>
+        <div class="header-alert">
+          <h1>Chúng tôi là A4K15</h1>
+        </div>
+        <div class="content-alert">
+          <h1>Thông Báo</h1>
+
+          <p>Gửi câu nói thành công rùi !!!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert-fail">
+      <div class="alert-container">
+        <div class="alert-close-2">
+          <i class="ti-close"></i>
+        </div>
+        <div class="header-alert">
+          <h1>Chúng tôi là A4K15</h1>
+        </div>
+        <div class="content-alert">
+          <h1>Thông Báo</h1>
+
+          <p>Lỗi Server !!!</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./database.js"></script>
+    <script src="./selection.js"></script>
   </body>
 </html>
