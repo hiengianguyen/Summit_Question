@@ -9,12 +9,13 @@ fetch(postApi)
   .then(function (data) {
     var classLists = data.map(function (classs) {
       return `
-       <option>
+       <option value="${
+         classs.class
+       }" ${classs.class == "10a4" ? "selected" : ""} >
        ${classs.class}
        </option>
        `;
     });
 
-    var html = classLists.join();
-    selectClass.innerHTML = html;
+    selectClass.innerHTML = classLists.join();
   });
