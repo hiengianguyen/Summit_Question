@@ -3,17 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/qst.css" />
+    <link rel="stylesheet" href="./publicQst.css" />
 
-    <link
-      rel="stylesheet"
-      href="./assets/font/themify-icons/themify-icons.css"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/img/avt-class (1).png"
-    />
+    <link rel="stylesheet" href="./font/themify-icons/themify-icons.css" />
+    <link rel="icon" type="image/x-icon" href="./img/avt-class.png" />
     <title>Summit Your Question</title>
   </head>
   <style>
@@ -23,18 +16,25 @@
       justify-content: center;
       text-align: center;
       align-items: center;
-      background-image: url("./assets/img/background-1.png");
-      background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
-      background-position: center; /* Căn giữa hình nền */
+      background: rgb(2, 0, 36);
+      background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(33, 42, 161, 1) 17%,
+        rgba(0, 212, 255, 1) 100%
+      );
     }
 
     @media (max-width: 740px) {
       body {
         height: 1000px;
         display: block;
-        background-image: url("./assets/img/background-2.png");
-        background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
-        background-position: center; /* Căn giữa hình nền */
+        background: rgb(47, 43, 157);
+        background: linear-gradient(
+          0deg,
+          rgba(47, 43, 157, 1) 0%,
+          rgba(34, 193, 195, 1) 77%
+        );
       }
 
       .modal-container-1 {
@@ -42,11 +42,27 @@
         top: 20px;
         min-height: 180px;
         margin: 50px 45px 30px 45px;
+
+        /* From https://css.glass */
+        background: rgba(39, 29, 156, 0.23);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(39, 29, 156, 0.45);
       }
 
       .modal-container-2 {
         width: auto;
         margin: 20px 45px;
+
+        /* From https://css.glass */
+        background: rgba(39, 29, 156, 0.23);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(39, 29, 156, 0.45);
       }
 
       .topic-1,
@@ -144,21 +160,17 @@
     <div class="modal-container-1">
       <div class="topic-1">
         <h1>Chúng tôi là A4K15</h1>
-        <img
-          class="img-topic-1"
-          src="./assets/img/avt-class.png"
-          alt="AVT-A4K15"
-        />
+        <img class="img-topic-1" src="./img/avt-class.png" alt="AVT-A4K15" />
       </div>
       <div class="sud-topic-1">
-        <p class="sud-tittle">
-          Bạn có điều gì muốn chia sẽ, góp ý, hay ước mơ của bạn đối với 10A4.
-          Hãy mạnh dạng chia sẽ với chúng tôi nào.
+        <p class="sud-tittle text-white">
+          Bạn có điều gì muốn chia sẽ, góp ý, hay ước mơ của bạn đối với 10A4
+          chúng tôi. Hãy mạnh dạng chia sẽ với chúng tôi nào.
         </p>
 
         <img
           class="img-topic-sud-1"
-          src="./assets/img/avt-class.png"
+          src="./img/avt-class.png"
           alt="AVT-A4K15"
         />
       </div>
@@ -170,17 +182,17 @@
       </div>
       <form id="contactForm">
         <div class="contact-info">
-          <div class="input-name">
+          <div class="input-name text-white">
             <label for="name">Tên của bạn:</label>
             <input type="text" id="name" name="name" required /><br /><br />
           </div>
-          <div class="input-class">
+          <div class="input-class text-white">
             <label for="class">Lớp của bạn:</label>
             <select class="select-class" id="class" name="class"></select>
 
             <br /><br />
           </div>
-          <div class="input-qst">
+          <div class="input-qst text-white">
             <label for="question">Câu Nói Của Bạn:</label><br />
             <textarea
               class="text-content"
@@ -230,7 +242,7 @@
       </div>
     </div>
 
-    <script src="./database.js"></script>
-    <script src="./selection.js"></script>
+    <script src="./JSPublic/publicDB.js"></script>
+    <script src="./JSPublic/publicSelection.js"></script>
   </body>
 </html>
