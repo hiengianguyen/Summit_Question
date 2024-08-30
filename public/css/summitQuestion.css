@@ -217,7 +217,6 @@ textarea#textarea-input:focus {
   border-radius: 5px;
 }
 
-.alert-fail,
 .alert {
   position: fixed;
   top: 0;

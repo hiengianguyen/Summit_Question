@@ -20,3 +20,23 @@
   font-family: Roboto, Arial, sans-serif;
   font-size: 14px;
 }
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-container {
+  background-color: #fff;
+  width: 900px;
+  min-height: 200px;
+  position: relative;
+  border-radius: 20px;
+}
