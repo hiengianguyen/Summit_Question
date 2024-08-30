@@ -1,5 +1,5 @@
 var alertH = document.querySelector(".alert");
-var alertFull = document.querySelector(".js-alert");
+var alertFull = document.querySelector(".alert");
 var tiClose = document.querySelector(".alert-close");
 var alertContainer = document.querySelector(".alert-container");
 
@@ -27,7 +27,6 @@ document
       );
 
       if (response.ok) {
-        const result = await response.json();
         alertH.style.display = "flex";
       } else {
         var alertFail = document.querySelector(".alert-fail");
