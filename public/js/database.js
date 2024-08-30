@@ -1,3 +1,5 @@
+var tittleElement = document.querySelector("title");
+var titleOriginal = tittleElement.innerHTML;
 var alertH = document.querySelector(".alert");
 var alertFull = document.querySelector(".alert");
 var tiClose = document.querySelector(".alert-close");
@@ -13,6 +15,9 @@ document
     const form = event.target;
     const data = new FormData(form);
     const jsonData = Object.fromEntries(data.entries());
+
+    document.getElementById("name").value = "";
+    document.querySelector("textarea").value = "";
 
     try {
       // Gửi dữ liệu đến API
@@ -31,14 +36,19 @@ document
         // hiện alert
         // nội dung ban đầu của alert là thành công
         alertH.style.display = "flex";
+        // nếu thành công thay tittle thành:
+        tittleElement.innerHTML = "Gửi Thành Công";
       } else {
         // hiện alert
         alertH.style.display = "flex";
         // nếu không gửi được thì thay text thành:
         contentAlert.innerHTML = "Gửi câu nói không được rùi =((";
+        // nếu gửi không thành công thay tittle thành:
+        tittleElement.innerHTML = "Gửi Không Thành Công";
         // close
         tiClose.addEventListener("click", function () {
           alertH.style.display = "none";
+          tittleElement.innerHTML = titleOriginal;
         });
       }
     } catch (error) {
@@ -46,19 +56,25 @@ document
       alertH.style.display = "flex";
       // nếu lọt vào catch thì thay text thành:
       contentAlert.innerHTML = "Lỗi server rùi =((";
+      // nếu lỗi server thì thay tittle thành:
+      tittleElement.innerHTML = "Lỗi Server";
       // close
       tiClose.addEventListener("click", function () {
         alertH.style.display = "none";
+        tittleElement.innerHTML = titleOriginal; // khôi phục tittle lại ban đầu
       });
     }
+    // reset input
   });
 // control alert
 tiClose.addEventListener("click", function () {
   alertH.style.display = "none"; // click vào "X" => close
+  tittleElement.innerHTML = titleOriginal; // khôi phục tittle lại ban đầu
 });
 
 alertFull.addEventListener("click", function () {
   alertH.style.display = "none"; //khi click khoản trong ngoài alert thì close
+  tittleElement.innerHTML = titleOriginal; // khôi phục tittle lại ban đầu
 });
 
 alertContainer.addEventListener("click", function (event) {

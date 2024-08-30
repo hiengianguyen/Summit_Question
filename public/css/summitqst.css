@@ -178,7 +178,7 @@ input#name:focus {
   box-shadow: 0 0 10px rgba(0, 0, 0, 1.4); /* Hiệu ứng đổ bóng khi được focus */
 }
 
-textarea#question {
+textarea#textarea-input {
   height: 120px;
   margin-top: 20px;
   padding: 10px;
@@ -188,7 +188,7 @@ textarea#question {
   background-color: #ccc;
 }
 
-textarea#question:focus {
+textarea#textarea-input:focus {
   border-color: #007bff; /* Màu viền khi được focus */
   background-color: #e9ecef; /* Màu nền khi được focus */
   color: #000; /* Màu chữ khi được focus */
