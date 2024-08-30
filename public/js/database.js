@@ -1,14 +1,14 @@
-var tittleElement = document.querySelector("title");
-var titleOriginal = tittleElement.innerHTML;
-var alertH = document.querySelector(".alert");
-var alertFull = document.querySelector(".alert");
-var tiClose = document.querySelector(".alert-close");
-var alertContainer = document.querySelector(".alert-container");
-var contentAlert = document.querySelector(".content-alert p");
+const tittleElement = document.querySelector("title");
+const titleOriginal = tittleElement.innerHTML;
+const alertH = document.querySelector(".alert");
+const alertFull = document.querySelector(".alert");
+const tiClose = document.querySelector(".alert-close");
+const alertContainer = document.querySelector(".alert-container");
+const contentAlert = document.querySelector(".content-alert p");
 
 document
   .getElementById("contactForm")
-  .addEventListener("submit", async function (event) {
+  .addEventListener("submit", async (event) => {
     event.preventDefault(); // Ngăn không gửi biểu mẫu theo cách thông thường
 
     // Lấy dữ liệu từ from
@@ -46,7 +46,7 @@ document
         // nếu gửi không thành công thay tittle thành:
         tittleElement.innerHTML = "Gửi Không Thành Công";
         // close
-        tiClose.addEventListener("click", function () {
+        tiClose.addEventListener("click", () => {
           alertH.style.display = "none";
           tittleElement.innerHTML = titleOriginal;
         });
@@ -59,24 +59,23 @@ document
       // nếu lỗi server thì thay tittle thành:
       tittleElement.innerHTML = "Lỗi Server";
       // close
-      tiClose.addEventListener("click", function () {
+      tiClose.addEventListener("click", () => {
         alertH.style.display = "none";
         tittleElement.innerHTML = titleOriginal; // khôi phục tittle lại ban đầu
       });
     }
-    // reset input
   });
 // control alert
-tiClose.addEventListener("click", function () {
+tiClose.addEventListener("click", () => {
   alertH.style.display = "none"; // click vào "X" => close
   tittleElement.innerHTML = titleOriginal; // khôi phục tittle lại ban đầu
 });
 
-alertFull.addEventListener("click", function () {
+alertFull.addEventListener("click", () => {
   alertH.style.display = "none"; //khi click khoản trong ngoài alert thì close
   tittleElement.innerHTML = titleOriginal; // khôi phục tittle lại ban đầu
 });
 
-alertContainer.addEventListener("click", function (event) {
+alertContainer.addEventListener("click", (event) => {
   event.stopPropagation(); //dừng sự kiện nổi bột
 });
