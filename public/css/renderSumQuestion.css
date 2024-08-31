@@ -6,10 +6,28 @@
 
 .text-content {
   background-color: #fff;
+  margin: 24px;
 }
 
-.block {
-  position: absolute;
+.sub-block {
+  height: 200px;
+  background-color: #fff;
+  padding: 0.1px;
+  border-radius: 1em;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.sub-block-1 {
+  background-color: #fff;
+  padding: 0.1px;
+  border-radius: 1em;
+}
+.container-1 {
+  padding: 50px;
+}
+
+.container-2 {
   height: 250px;
   width: 900px;
 }
@@ -19,6 +37,9 @@
   padding: 10px;
   font-family: Roboto, Arial, sans-serif;
   font-size: 14px;
+  border-radius: 2em;
+  background-color: #ccc;
+  margin-top: 4px;
 }
 
 .alert {
@@ -39,4 +60,15 @@
   min-height: 200px;
   position: relative;
   border-radius: 20px;
+}
+
+.container-2 .summit-question-content {
+  margin-top: 35px;
+  font-size: 25px;
+  color: white;
+}
+
+.heading-title {
+  color: #fff;
+  font-size: 25px;
 }
