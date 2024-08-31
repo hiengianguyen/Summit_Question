@@ -4,6 +4,20 @@
   box-sizing: 0;
 }
 
+body {
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: rgb(47, 43, 157);
+  background: linear-gradient(
+    0deg,
+    rgba(47, 43, 157, 1) 0%,
+    rgba(34, 193, 195, 1) 77%
+  );
+}
+
 .text-while {
   color: #fff;
 }
@@ -28,20 +42,7 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* .modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(217, 245, 249);
-} */
-
 .modal-container-1 {
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.19);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
@@ -87,7 +88,6 @@ p {
 }
 
 .modal-container-2 {
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.19);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
@@ -113,15 +113,6 @@ p {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
-/* .modal-container .modal-close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 15px;
-  border-top-right-radius: 10px;
-  color: #fff;
-} */
 
 .modal-container-2 .modal-close:hover {
   color: #fff;
@@ -289,4 +280,119 @@ textarea#textarea-input:focus {
 
   background: rgb(244, 67, 54);
   color: #000;
+}
+
+@media (max-width: 740px) {
+  body {
+    height: 1000px;
+    display: block;
+    background: rgb(47, 43, 157);
+    background: linear-gradient(
+      0deg,
+      rgba(47, 43, 157, 1) 0%,
+      rgba(34, 193, 195, 1) 77%
+    );
+  }
+
+  .modal-container-1 {
+    width: auto;
+    top: 20px;
+    min-height: 180px;
+    margin: 50px 45px 30px 45px;
+  }
+
+  .modal-container-2 {
+    width: auto;
+    margin: 20px 45px;
+  }
+
+  .topic-1,
+  .modal-container-2 .topic-2 {
+    height: 15px;
+    padding: 15px;
+    font-size: 9px;
+  }
+
+  .modal-container-1 .sud-tittle {
+    padding: 25px;
+    font-size: 16px;
+  }
+
+  .topic-1 .img-topic-1 {
+    display: none;
+  }
+
+  .sud-topic-1 {
+    position: relative;
+  }
+
+  .img-topic-sud-1 {
+    position: absolute;
+    display: block;
+    width: 44px;
+    border-radius: 50%;
+    right: 10px;
+    bottom: -15px;
+  }
+
+  input#name {
+    border-radius: 5em;
+  }
+
+  input#name:focus {
+    border-color: #007bff; /* Màu viền khi được focus */
+    background-color: #e9ecef; /* Màu nền khi được focus */
+    color: #000; /* Màu chữ khi được focus */
+    outline: none; /* Loại bỏ viền mặc định của trình duyệt khi được focus */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.4); /* Hiệu ứng đổ bóng khi được focus */
+  }
+
+  .select-class:focus {
+    border-color: #007bff; /* Màu viền khi được focus */
+    background-color: #e9ecef; /* Màu nền khi được focus */
+    color: #000; /* Màu chữ khi được focus */
+    outline: none; /* Loại bỏ viền mặc định của trình duyệt khi được focus */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.4); /* Hiệu ứng đổ bóng khi được focus */
+  }
+
+  .select-class {
+    font-size: 18px;
+    border: 2px solid #2be6ef;
+    border-radius: 5em;
+    height: 30px;
+    width: 70px;
+  }
+
+  input#name {
+    padding: 6px;
+    width: 90px;
+  }
+
+  #contactForm .input-qst {
+    font-size: 20px;
+  }
+
+  #contactForm .contact-info {
+    font-size: 15px;
+  }
+
+  textarea#textarea-input {
+    height: 50px;
+    width: 185px;
+    border-radius: 1em;
+    margin-top: 5px;
+  }
+
+  .header-alert {
+    font-size: 13px;
+  }
+
+  .alert-container {
+    margin: 45px;
+  }
+
+  .content-alert {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
 }
