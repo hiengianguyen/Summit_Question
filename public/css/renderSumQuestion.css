@@ -4,6 +4,13 @@
   box-sizing: 0;
 }
 
+body {
+  background-image: url("../assets/images/background-1.png");
+  background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
+  background-position: center; /* Căn giữa hình nền */
+  height: 1000px;
+}
+
 .text-content {
   background-color: #fff;
   margin: 24px;
@@ -71,4 +78,19 @@
 .heading-title {
   color: #fff;
   font-size: 25px;
+}
+
+@media (max-width: 740px) {
+  body {
+    align-items: normal;
+  }
+
+  .container-1,
+  .container-2 {
+    padding: 24px;
+  }
+
+  .container-2 {
+    width: 350px;
+  }
 }
