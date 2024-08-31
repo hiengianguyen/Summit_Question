@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url("../assets/images/background-1.png");
+  background-image: url("../assets/images/blob-scene-haikei.png");
   background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
   background-position: center; /* Căn giữa hình nền */
   height: 1000px;
@@ -17,7 +17,7 @@ body {
 }
 
 .sub-block {
-  height: 200px;
+  height: 400px;
   background-color: #fff;
   padding: 0.1px;
   border-radius: 1em;
@@ -39,14 +39,22 @@ body {
   width: 900px;
 }
 
-.text-content div {
-  display: block;
+.text-content .box-text-content {
   padding: 10px;
   font-family: Roboto, Arial, sans-serif;
   font-size: 14px;
-  border-radius: 2em;
+  border-radius: 1em;
   background-color: #ccc;
   margin-top: 4px;
+}
+
+.box-text-content .name-text-content {
+  margin-bottom: 5px;
+}
+
+.box-text-content .time-text-content {
+  margin-top: 2px;
+  color:#737171;
 }
 
 .alert {
