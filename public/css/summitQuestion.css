@@ -10,8 +10,14 @@ body {
   justify-content: center;
   text-align: center;
   align-items: center;
-  background: rgb(30,0,36);
-  background: linear-gradient(90deg, rgba(30,0,36,1) 0%, rgba(34,44,62,1) 60%, rgba(108,82,100,1) 100%, rgba(0,212,255,1) 100%);
+  background: rgb(30, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 0, 36, 1) 0%,
+    rgba(34, 44, 62, 1) 60%,
+    rgba(108, 82, 100, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
 }
 
 .text-while {
@@ -42,8 +48,6 @@ p {
   background: rgba(255, 255, 255, 0.19);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  
- 
 
   width: 900px;
   min-height: 200px;
@@ -87,7 +91,6 @@ p {
   background: rgba(255, 255, 255, 0.19);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-
 
   width: 900px;
   min-height: 200px;
@@ -285,8 +288,13 @@ textarea#textarea-input:focus {
   body {
     height: 1000px;
     display: block;
-    background: rgb(30,0,36);
-background: linear-gradient(90deg, rgba(30,0,36,1) 0%, rgba(34,44,62,1) 50%, rgba(107,84,100,1) 100%);
+    background: rgb(30, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(30, 0, 36, 1) 0%,
+      rgba(34, 44, 62, 1) 50%,
+      rgba(107, 84, 100, 1) 100%
+    );
   }
 
   .modal-container-1 {
@@ -351,7 +359,7 @@ background: linear-gradient(90deg, rgba(30,0,36,1) 0%, rgba(34,44,62,1) 50%, rgb
   }
 
   .select-class {
-    font-size: 18px;
+    font-size: 16px;
     border: 2px solid #2be6ef;
     border-radius: 5em;
     height: 30px;
