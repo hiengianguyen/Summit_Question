@@ -11,9 +11,14 @@ try {
     .then((response) => response.json())
     .then((data) => {
       const textContents = data.map(
+       
         (text) =>
           `
-      <div>${text.textcontent}</div>
+      <div class="box-text-content">
+      <div class="name-text-content">${text.name} (${text.class == '' ? 'undefined' : text.class})</div>
+      ${text.textcontent} 
+      <div class="time-text-content">${text.sendTime}</div>
+      </div> 
       `
       );
 
