@@ -48,8 +48,17 @@ body {
   margin-top: 4px;
 }
 
+.box-text-content img {
+  width: 30px;
+}
+
 .box-text-content .name-text-content {
-  margin-bottom: 5px;
+  margin: auto 0 auto 10px;
+  font-size: 18px;
+}
+
+.avatar-name-text-content {
+  display: flex;
 }
 
 .box-text-content .time-text-content {
