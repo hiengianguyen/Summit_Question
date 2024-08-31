@@ -1,4 +1,6 @@
 import { textContentsApi } from "./apis.js";
+import { avatars } from "./common.js";
+
 const content = document.querySelector(".text-content");
 const tittleElement = document.querySelector("title");
 const titleOriginal = tittleElement.innerHTML;
@@ -15,10 +17,15 @@ try {
         (text) =>
           `
       <div class="box-text-content">
-      <div class="name-text-content">${text.name} (${text.class == '' ? 'undefined' : text.class})</div>
-      ${text.textcontent} 
-      <div class="time-text-content">${text.sendTime}</div>
-      </div> 
+      <div class="avatar-name-text-content">
+        <img src="${avatars[0]}" /> 
+        <div class="name-text-content">${text.name} ${text.class == '' ?  '' : `(${text.class})`}</div>
+      </div>
+      <div>
+        ${text.textcontent} 
+        <div class="time-text-content">${text.sendTime}</div>
+        </div> 
+      </div>
       `
       );
 
