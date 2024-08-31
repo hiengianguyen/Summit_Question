@@ -1,5 +1,6 @@
 import { textContentsApi } from "./apis.js";
-import { avatars } from "./common.js";
+import { boyAvatars } from "./common.js";
+import { girlAvatars } from "./common.js";
 
 const content = document.querySelector(".text-content");
 const tittleElement = document.querySelector("title");
@@ -13,13 +14,20 @@ try {
     .then((response) => response.json())
     .then((data) => {
       const textContents = data.map(
-       
         (text) =>
           `
       <div class="box-text-content">
       <div class="avatar-name-text-content">
-        <img src="${avatars[Math.floor(Math.random()*avatars.length)]}" /> 
-        <div class="name-text-content">${text.name} ${text.class == '' ?  '' : `(${text.class})`}</div>
+        <img src="
+        ${
+          text.gender === "Nam"
+            ? boyAvatars[Math.floor(Math.random() * boyAvatars.length)]
+            : girlAvatars[Math.floor(Math.random() * girlAvatars.length)]
+        }
+        " /> 
+        <div class="name-text-content">${text.name} ${
+            text.class == "" ? "" : `(${text.class})`
+          }</div>
       </div>
       <div>
        Câu Nói: ${text.textcontent} 

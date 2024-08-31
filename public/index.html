@@ -56,6 +56,12 @@
 
             <br /><br />
           </div>
+          <div class="input-class text-while">
+            <label for="gender">Giới tính:</label>
+            <select class="select-class" id="gender" name="gender"></select>
+
+            <br /><br />
+          </div>
           <div class="input-qst text-while">
             <label for="question">Câu Nói Của Bạn:</label><br />
             <textarea
@@ -85,13 +91,15 @@
         <div class="content-alert">
           <h1>Thông Báo</h1>
           <p>Gửi câu nói thành công rùi !!!</p>
-          <div class="check-question">Xem câu trả lời <a href="./html/renderSummitQuestion.html">ở đây</a></div>
-
+          <div class="check-question">
+            Xem câu trả lời <a href="./html/renderSummitQuestion.html">ở đây</a>
+          </div>
         </div>
       </div>
     </div>
 
     <script src="./js/database.js" type="module"></script>
-    <script src="./js/selectionClass.js" type="module"></script>
+    <script src="./js/selectClass.js" type="module"></script>
+    <script src="./js/selectGender.js" type="module"></script>
   </body>
 </html>
