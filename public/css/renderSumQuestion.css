@@ -59,10 +59,11 @@ body {
 
 .avatar-name-text-content {
   display: flex;
+  margin-bottom: 7px;
 }
 
 .box-text-content .time-text-content {
-  margin-top: 2px;
+  margin-top: 4px;
   color:#737171;
 }
 

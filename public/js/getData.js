@@ -18,11 +18,11 @@ try {
           `
       <div class="box-text-content">
       <div class="avatar-name-text-content">
-        <img src="${avatars[0]}" /> 
+        <img src="${avatars[Math.floor(Math.random()*avatars.length)]}" /> 
         <div class="name-text-content">${text.name} ${text.class == '' ?  '' : `(${text.class})`}</div>
       </div>
       <div>
-        ${text.textcontent} 
+       Câu Nói: ${text.textcontent} 
         <div class="time-text-content">${text.sendTime}</div>
         </div> 
       </div>
