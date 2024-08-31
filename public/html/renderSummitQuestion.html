@@ -8,19 +8,41 @@
   </head>
   <style>
     body {
-      position: relative;
+      /* position: relative; */
       background-image: url("../assets/images/background-1.png");
       background-size: cover; /* Đảm bảo hình nền phủ toàn bộ phần tử */
       background-position: center; /* Căn giữa hình nền */
       height: 1000px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    }
+    @media (max-width: 740px) {
+      body {
+        align-items: normal;
+      }
+
+      .container-1,
+      .container-2 {
+        padding: 24px;
+      }
+
+      .container-2 {
+        width: 350px;
+      }
     }
   </style>
   <body>
-    <div class="block">
-      <div class="text-content"></div>
+    <div class="container-1">
+      <div class="heading-title">
+        Dưới đây là những câu hỏi mà chúng tôi đã nhận được trong thời gian qua
+      </div>
+    </div>
+
+    <div class="container-2">
+      <div class="sub-block">
+        <div class="text-content"></div>
+      </div>
+      <div class="summit-question-content">
+        Gửi câu hỏi mới <a href="../index.html">ở đây</a>
+      </div>
     </div>
 
     <div class="alert">
