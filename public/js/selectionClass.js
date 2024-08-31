@@ -1,8 +1,8 @@
-const postApi = "https://66ccad7da4dd3c8a71b87616.mockapi.io/classlists";
+import { classlistsApi } from "./apis.js";
 const selectClass = document.querySelector(".select-class");
 
 // get Data
-fetch(postApi)
+fetch(classlistsApi)
   .then((response) => response.json())
   .then((data) => {
     const classLists = data.map(

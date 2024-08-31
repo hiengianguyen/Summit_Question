@@ -1,3 +1,5 @@
+import { getFormattedCurrentDateTime } from "./common.js";
+import { textContentsApi } from "./apis.js";
 const tittleElement = document.querySelector("title");
 const titleOriginal = tittleElement.innerHTML;
 const alertH = document.querySelector(".alert");
@@ -15,22 +17,20 @@ document
     const form = event.target;
     const data = new FormData(form);
     const jsonData = Object.fromEntries(data.entries());
+    jsonData.sendTime = getFormattedCurrentDateTime();
 
     document.getElementById("name").value = "";
     document.querySelector("textarea").value = "";
 
     try {
       // Gửi dữ liệu đến API
-      const response = await fetch(
-        "https://66ccad7da4dd3c8a71b87616.mockapi.io/textContents",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(jsonData),
-        }
-      );
+      const response = await fetch(textContentsApi, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(jsonData),
+      });
 
       if (response.ok) {
         // hiện alert
