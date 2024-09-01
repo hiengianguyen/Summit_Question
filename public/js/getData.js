@@ -1,7 +1,4 @@
 import { textContentsApi } from "./apis.js";
-import { boyAvatars } from "./common.js";
-import { girlAvatars } from "./common.js";
-
 const content = document.querySelector(".text-content");
 const tittleElement = document.querySelector("title");
 const titleOriginal = tittleElement.innerHTML;
@@ -19,11 +16,7 @@ try {
       <div class="box-text-content">
       <div class="avatar-name-text-content">
         <img src="
-        ${
-          text.gender === "Nam"
-            ? boyAvatars[Math.floor(Math.random() * boyAvatars.length)]
-            : girlAvatars[Math.floor(Math.random() * girlAvatars.length)]
-        }
+        ${text.avatar}
         " /> 
         <div class="name-text-content">${text.name} ${
             text.class == "" ? "" : `(${text.class})`

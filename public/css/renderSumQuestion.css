@@ -20,16 +20,20 @@ body {
   height: 400px;
   background-color: #fff;
   padding: 0.1px;
-  border-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
   overflow: hidden;
   overflow-y: auto;
 }
 
 .header-block {
+  background-color: #fff;
   display: flex;
   justify-content: center;
   width: auto;
-  margin: 10px 24px 0 24px;
+  padding: 10px 24px 0 24px;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
 }
 
 .header-block .tittle-text-content {
@@ -140,7 +144,8 @@ body {
   .header-block {
     display: flex;
     width: auto;
-    margin: 10px 24px 0 24px;
+    
+    
   }
 
   .container-2 {
