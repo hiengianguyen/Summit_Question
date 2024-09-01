@@ -33,7 +33,7 @@ body {
 }
 
 .header-block .tittle-text-content {
-  font-size: 22px;
+  font-size: 18px;
   margin: 30px 12px 0 10px;
 }
 
@@ -43,7 +43,7 @@ body {
 
 .avt-class-question {
  
-  width: 53px;
+    width: 50px;
     border-radius: 50%;
     margin: 15px;
     right: -260px;
