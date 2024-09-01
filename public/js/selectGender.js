@@ -1,5 +1,5 @@
 const selectGender = document.querySelector("#gender");
-const genderApi = "http://localhost:3000/genderList";
+const genderApi = "https://66d3a7f4184dce1713d0a77d.mockapi.io/genderList";
 // get Data
 fetch(genderApi)
   .then((response) => response.json())
