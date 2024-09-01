@@ -2,6 +2,7 @@ import { getFormattedCurrentDateTime } from "./common.js";
 import { textContentsApi } from "./apis.js";
 import { boyAvatars } from "./common.js";
 import { girlAvatars } from "./common.js";
+import { defaultAvatar } from "./common.js";
 
 const tittleElement = document.querySelector("title");
 const titleOriginal = tittleElement.innerHTML;
@@ -10,7 +11,6 @@ const alertFull = document.querySelector(".alert");
 const tiClose = document.querySelector(".alert-close");
 const alertContainer = document.querySelector(".alert-container");
 const contentAlert = document.querySelector(".content-alert p");
-console.log(girlAvatars)
 
 document
   .getElementById("contactForm")
@@ -23,10 +23,12 @@ document
     const jsonData = Object.fromEntries(data.entries());
     jsonData.sendTime = getFormattedCurrentDateTime();
     jsonData.gender === "Nam"
-     ? jsonData.avatar =
-    boyAvatars[Math.floor(Math.random() * boyAvatars.length)]
-    : jsonData.avatar =
-    girlAvatars[Math.floor(Math.random() * girlAvatars.length)]
+      ? (jsonData.avatar =
+          boyAvatars[Math.floor(Math.random() * boyAvatars.length)])
+      : jsonData.gender === "Nữ"
+      ? (jsonData.avatar =
+          girlAvatars[Math.floor(Math.random() * girlAvatars.length)])
+      : (jsonData.avatar = defaultAvatar);
 
     document.getElementById("name").value = "";
     document.querySelector("textarea").value = "";
