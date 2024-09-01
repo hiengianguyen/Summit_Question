@@ -13,7 +13,7 @@ body {
 
 .text-content {
   background-color: #fff;
-  margin: 24px;
+  margin: 0 24px 24px 24px;
 }
 
 .sub-block {
@@ -25,18 +25,43 @@ body {
   overflow-y: auto;
 }
 
+.header-block {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: 10px 24px 0 24px;
+}
+
+.header-block .tittle-text-content {
+  font-size: 22px;
+  margin: 30px 12px 0 10px;
+}
+
+.text-content-box {
+  font-size: 18px;
+}
+
+.avt-class-question {
+ 
+  width: 53px;
+    border-radius: 50%;
+    margin: 15px;
+    right: -260px;
+}
+
 .sub-block-1 {
   background-color: #fff;
   padding: 0.1px;
   border-radius: 1em;
 }
 .container-1 {
-  padding: 50px;
+ padding: 35px;
+ margin: 0 75px;
 }
 
 .container-2 {
   height: 250px;
-  width: 900px;
+  margin: 0 75px;
 }
 
 .text-content .box-text-content {
@@ -102,13 +127,25 @@ body {
   body {
     align-items: normal;
   }
+  .container-1 {
+   padding: 35px 0;
+  }
 
   .container-1,
   .container-2 {
-    padding: 24px;
+    margin: 0 45px;
+
+  }
+
+  .header-block {
+    display: flex;
+    width: auto;
+    margin: 10px 24px 0 24px;
   }
 
   .container-2 {
     width: 350px;
   }
+
+  
 }

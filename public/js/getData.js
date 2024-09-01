@@ -29,7 +29,7 @@ try {
             text.class == "" ? "" : `(${text.class})`
           }</div>
       </div>
-      <div>
+      <div class="text-content-box">
        Câu Nói: ${text.textcontent} 
         <div class="time-text-content">${text.sendTime}</div>
         </div> 
