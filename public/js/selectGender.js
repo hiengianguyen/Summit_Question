@@ -7,7 +7,9 @@ fetch(genderApi)
     const genderList = data.map(
       (genders) =>
         `
-       <option value="${genders.gender}" >
+       <option value="${genders.gender}" ${
+          genders.gender === "Nam" ? "selected" : ""
+        }>
        ${genders.gender}
        </option>
        `
