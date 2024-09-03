@@ -10,7 +10,7 @@ try {
   fetch(textContentsApi)
     .then((response) => response.json())
     .then((data) => {
-      const textContents = data.map(
+      const textContents = data.reverse().map(
         (text) =>
           `
       <div class="box-text-content">
