@@ -28,8 +28,12 @@ const getFormattedCurrentDateTime = () => {
   const month = String(now.getMonth() + 1).padStart(2, "0");
   const year = now.getFullYear();
 
-  // Format datetime
-  return `${hours}:${minutes} ${day}/${month}/${year}`;
+  const result = {
+    sendTime: `${hours}:${minutes} ${day}/${month}/${year}`,
+    sendTimestamp: now.getTime(),
+  };
+
+  return result;
 };
 
 export { getFormattedCurrentDateTime, boyAvatars, girlAvatars, defaultAvatar };
