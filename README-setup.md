@@ -16,11 +16,9 @@
 - Lưu ý địa điểm nhập lệnh là terminal của vscode hoặc của hệ thống
 - Đúng đường dẫn đến thư mục dự án đã xây dựng
 
-3. Add foder .github\workflows\deploy.yml vào dự án (vào dự án ở dạng file để dễ xử lí phần add)
+3. Add file .github\workflows\deploy.yaml vào dự án.
 
 - phân tích file deploy.yml:
-
-  - 'name: Deploy web app to Firebase Hosting' đây là tên của workflow, có thể đặt tên bất kì đễ dễ hiểu
 
   - ' on:
     push:
@@ -43,7 +41,7 @@
 
 - Name \*: FIREBASE_TOKEN
 - Secret \*:
-  1// 0e8AmNz1-HwE6CgYIARAAGA4SNwF-L9Ir8qOCLQ43b54s_dcc_iSuZ0TofE qmwiObOyJTGotfZjdsjDtxGiT-nxu7N3Il0SDRYvk
+ 
 
 - Add secret
 
