@@ -23,16 +23,17 @@
   - 'name: Deploy web app to Firebase Hosting' đây là tên của workflow, có thể đặt tên bất kì đễ dễ hiểu
 
   - ' on:
-    push:
-    branches: - main '
+        push:
+           branches:
+               - main '
 
   * 'on:' Chỉ định sự kiện kích hoạt workflow.
   * 'push:' Sự kiện khi có đẩy (push) code lên kho.
   * 'branches:' Chỉ định nhánh nào sẽ kích hoạt workflow. Trong trường hợp này, workflow sẽ được kích hoạt khi có thay đổi trên nhánh 'main'. Bạn có thể thay đổi tên nhánh này nếu cần.
 
   - ' jobs:
-    deploy:
-    runs-on: ubuntu-latest '
+        deploy:
+           runs-on: ubuntu-latest '
 
   * 'deploy:' tên jobs, có thể thay tên bất kì nếu cần
   * 'runs-on:' Chỉ định hệ điều hành mà job sẽ chạy. ubuntu-latest có nghĩa là job sẽ chạy trên môi trường Ubuntu mới nhất.
@@ -43,7 +44,7 @@
 
 - Name \*: FIREBASE_TOKEN
 - Secret \*:
-  1// 0e8AmNz1-HwE6CgYIARAAGA4SNwF-L9Ir8qOCLQ43b54s_dcc_iSuZ0TofE qmwiObOyJTGotfZjdsjDtxGiT-nxu7N3Il0SDRYvk
+  1//0e8AmNz1-HwE6CgYIARAAGA4SNwF-L9Ir8qOCLQ43b54s_dcc_iSuZ0TofE qmwiObOyJTGotfZjdsjDtxGiT-nxu7N3Il0SDRYvk
 
 - Add secret
 
