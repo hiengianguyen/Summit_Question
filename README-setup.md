@@ -23,9 +23,8 @@
   - 'name: Deploy web app to Firebase Hosting' đây là tên của workflow, có thể đặt tên bất kì đễ dễ hiểu
 
   - ' on:
-        push:
-           branches:
-               - main '
+    push:
+    branches:- main '
 
   * 'on:' Chỉ định sự kiện kích hoạt workflow.
   * 'push:' Sự kiện khi có đẩy (push) code lên kho.
