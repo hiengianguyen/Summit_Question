@@ -20,20 +20,13 @@
 
 - phân tích file deploy.yml:
 
-  - ' on:
-    push:
-    branches: - main '
-
-  * 'on:' Chỉ định sự kiện kích hoạt workflow.
-  * 'push:' Sự kiện khi có đẩy (push) code lên kho.
-  * 'branches:' Chỉ định nhánh nào sẽ kích hoạt workflow. Trong trường hợp này, workflow sẽ được kích hoạt khi có thay đổi trên nhánh 'main'. Bạn có thể thay đổi tên nhánh này nếu cần.
+  - ' on: 'on:' Chỉ định sự kiện kích hoạt workflow.
+    push: 'push:' Sự kiện khi có đẩy (push) code lên kho.
+    branches: - main 'branches:' Chỉ định nhánh nào sẽ kích hoạt workflow. Trong trường hợp này, workflow sẽ được kích hoạt khi có thay đổi trên nhánh 'main'. Bạn có thể thay đổi tên nhánh này nếu cần.'
 
   - ' jobs:
-    deploy:
-    runs-on: ubuntu-latest '
-
-  * 'deploy:' tên jobs, có thể thay tên bất kì nếu cần
-  * 'runs-on:' Chỉ định hệ điều hành mà job sẽ chạy. ubuntu-latest có nghĩa là job sẽ chạy trên môi trường Ubuntu mới nhất.
+    deploy: 'deploy:' tên jobs, có thể thay tên bất kì nếu cần
+    runs-on: ubuntu-latest, 'runs-on:' Chỉ định hệ điều hành mà job sẽ chạy. ubuntu-latest có nghĩa là job sẽ chạy trên môi trường Ubuntu mới nhất.'
 
   - còn lại là các bước của job. Mỗi bước có thể sử dụng một action hoặc chạy một lệnh shell.
 
@@ -41,7 +34,6 @@
 
 - Name \*: FIREBASE_TOKEN
 - Secret \*:
- 
 
 - Add secret
 
